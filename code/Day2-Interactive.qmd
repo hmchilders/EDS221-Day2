@@ -11,6 +11,10 @@ execute:
 
 # Day 2
 
+```{r}
+library(tidyverse)
+```
+
 ## Making and Indexing Data in R
 
 ### Making Vectors
@@ -162,4 +166,29 @@ ttest_example <- t.test(sample_1, sample_2)
 
 ```
 
-The mwan size for trees in site a is greater than the mean size in site B (...my statistical summary..., `r ttest_example$p.value`)
+The mean size for trees in site a is greater than the mean size in site B (...my statistical summary..., `r ttest_example$p.value`)
+
+## Data Frame
+
+```{r}
+fruit <- data.frame(type = c("apple", "im a banana", "peach"), mass = c(130, 195, 150))
+class(fruit)
+fruit[3,2]
+```
+
+```{r}
+# purrr::pluck(data, column info, second element)
+purrr::pluck(fruit, "type", 2)
+fruit$type[2]
+```
+
+```{r}
+starwars
+starwars$starships
+starwars$starships[1]
+starwars$starships[[1]][2]
+```
+
+```{r}
+purrr::pluck(starwars, "starships", 1,2)
+```
