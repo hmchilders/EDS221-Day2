@@ -3,6 +3,102 @@ title: "Day 2 Interactive Activity"
 author: "Heather"
 format: html
 editor: visual
+
+execute: 
+  warning: false
+  echo: true
 ---
 
-## Day 2
+# Day 2
+
+## Making and Indexing Data in R
+
+### Making Vectors
+
+Character Vectors
+
+```{r}
+# Make a vector of NCEAS Dogs
+dogs <- c("teddy", "khora", "waffle", "banjo", "tallie")
+
+#  check the class of the vector
+class(dogs)
+typeof (dogs)
+```
+
+Multi variable vector
+
+```{r}
+my_breakfast <- c("waffles", 2, TRUE, "coffee")
+class(my_breakfast)
+my_breakfast
+
+```
+
+Numeric vs Integer Vectors
+
+```{r}
+weights <- c(50, 60, 25, 35, 55)
+class(weights)
+
+weights_Integer <- c(50L, 60L, 25L, 35L, 55L)
+class(weights_Integer)
+```
+
+You can use the is.\_\_\_\_\_\_\_ function to determine how the data is being stored by R
+
+```{r}
+is.numeric(weights_Integer)
+```
+
+Similarly, you can use the as.\_\_\_\_\_\_\_\_ function to redefine a set of data as a different kind of data. For example, R will read Zip Codes as numeric inputs. However, we know that Zip Codes are a category or a character data input.
+
+```{r}
+zipcodes <- c(93105, 93514, 93101, 93401)
+class(zipcodes)
+
+zipcodes_char <- as.character(zipcodes)
+class(zipcodes_char)
+
+```
+
+### Create a vector with named elements
+
+```{r}
+dog_food <- c(teaddy = "purina", khora = "alpo", waffle = "fancy feast", banjo = "blue diamond",tallie = "farmer's dog")
+
+class(dog_food)
+
+portion_size <- c(teddy = "6", khora = "7", waffle = "9", banjo = "10", tallie = "15")
+portion_size
+
+
+
+```
+
+### Call an element from a vector
+
+```{r}
+dog_food[2]
+# R uses a 1-index, so the first element of the vector is denoted 1
+
+# If an element is named, you can call the name as well
+dog_food["khora"]
+```
+
+### Access ranges of values in a vector:
+
+Use : to refer to a range (low:high)
+
+```{r}
+trees <- c("ponderosa", "lodgepole", "jeffery", "sugar", "bristlecone")
+trees[3:5]
+```
+
+## FOR LOOP WARM-UP
+
+```{r}
+i <- seq(1:3)
+trees[i]
+
+```
