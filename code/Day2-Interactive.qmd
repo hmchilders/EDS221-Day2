@@ -136,3 +136,30 @@ fish_size[,2]
 An Edit!
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_LUNCH BREAK\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Lists
+
+```{r}
+urchins <- list("blue", c(1,2,3), c("lunch", "dinner", "dessert"), 5L)
+urchins
+
+```
+
+```{r}
+urchins_list <- urchins[2]
+class(urchins_list)
+
+urchins_vector <- urchins[[2]]
+class(urchins_vector )
+```
+
+```{r}
+sample_1 <- c(1,5,7,9,4,7)
+sample_2 <- c(2,4,7,6,8,0)
+
+ttest_example <- t.test(sample_1, sample_2)
+
+
+```
+
+The mwan size for trees in site a is greater than the mean size in site B (...my statistical summary..., `r ttest_example$p.value`)
