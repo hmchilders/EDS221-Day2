@@ -102,3 +102,10 @@ i <- seq(1:3)
 trees[i]
 
 ```
+
+```{r}
+trees[3] <- "OAK"
+
+trees
+trees[i]
+```
